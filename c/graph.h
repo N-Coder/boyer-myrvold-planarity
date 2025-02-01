@@ -32,7 +32,7 @@ int		gp_CreateRandomGraphEx(graphP theGraph, int numEdges);
 
 void	gp_Free(graphP *pGraph);
 
-int		gp_Read(graphP theGraph, char *FileName);
+int		gp_Read(graphP theGraph, const char *FileName);
 int		gp_ReadFromString(graphP theGraph, char *inputStr);
 
 #define WRITE_ADJLIST   1

@@ -370,7 +370,7 @@ int  _ReadLEDAGraph(graphP theGraph, FILE *Infile)
  Returns: OK, NOTOK on internal error, NONEMBEDDABLE if too many edges
  ********************************************************************/
 
-int gp_Read(graphP theGraph, char *FileName)
+int gp_Read(graphP theGraph, const char *FileName)
 {
 FILE *Infile;
 char Ch;
