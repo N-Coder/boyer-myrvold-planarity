@@ -13,7 +13,11 @@ See the LICENSE.TXT file for licensing information.
 extern "C" {
 #endif
 
+#ifdef __cplusplus
 struct graphExtension
+#else
+typedef struct
+#endif
 {
     int  moduleID;
     void *context;
@@ -22,8 +26,13 @@ struct graphExtension
 
     graphFunctionTableP functions;
 
+#ifdef __cplusplus
     graphExtension *next;
 };
+#else
+    struct graphExtension *next;
+} graphExtension;
+#endif
 
 typedef graphExtension * graphExtensionP;
 
